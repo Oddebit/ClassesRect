@@ -2,6 +2,9 @@ package be.intecbrussel.opdracht1;
 
 public class Rectangle {
 
+    private static  int count;
+    public static final int ANGLES;
+
     private int height;
     private int width;
     private int x;
@@ -12,6 +15,15 @@ public class Rectangle {
     public Rectangle() {
 
         this(0, 0, 0, 0);
+    }
+
+    static {
+        ANGLES = 4;
+        count = 0;
+    }
+
+    {
+        count++;
     }
 
     public Rectangle(int height, int width) {
@@ -118,5 +130,9 @@ public class Rectangle {
     public int getY() {
 
         return y;
+    }
+
+    public static int getCount() {
+        return count;
     }
 }
