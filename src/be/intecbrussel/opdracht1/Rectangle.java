@@ -2,11 +2,17 @@ package be.intecbrussel.opdracht1;
 
 public class Rectangle {
 
+    private static int count = 0;
+
     private int height;
     private int width;
     private int x;
     private int y;
 
+
+    {
+        count++;
+    }
 
     // CONSTRUCTOR
     public Rectangle() {
@@ -118,5 +124,9 @@ public class Rectangle {
     public int getY() {
 
         return y;
+    }
+
+    public static int getCount() {
+        return count;
     }
 }

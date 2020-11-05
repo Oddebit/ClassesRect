@@ -2,6 +2,12 @@ package be.intecbrussel.opdracht1;
 
 public class Square extends Rectangle {
 
+    private static int count = 0;
+
+    {
+        count++;
+    }
+
     // CONSTRUCTOR
     public Square() {
 
@@ -27,6 +33,11 @@ public class Square extends Rectangle {
     // GETTERS
     public int getSide() {
         return this.getHeight();
+    }
+
+    public static int getCount() {
+
+        return count;
     }
 
 
